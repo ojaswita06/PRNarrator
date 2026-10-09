@@ -1,0 +1,10 @@
+﻿fastapi
+uvicorn[standard]
+streamlit
+httpx
+python-dotenv
+pydantic-settings
+langgraph
+langchain-core
+langchain-ollama
+pytest
