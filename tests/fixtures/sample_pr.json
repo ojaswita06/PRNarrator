@@ -1,0 +1,27 @@
+﻿{
+  "title": "Improve API request validation",
+  "url": "https://github.com/example/repo/pull/1",
+  "state": "open",
+  "base": {
+    "ref": "main"
+  },
+  "head": {
+    "ref": "feature/api-validation"
+  },
+  "files": [
+    {
+      "filename": "app/main.py",
+      "status": "modified",
+      "additions": 8,
+      "deletions": 3,
+      "patch": "@@ -10,3 +10,8 @@\n+def validate_request(data):\n+    if not data:\n+        raise ValueError(\"Request data is required\")"
+    },
+    {
+      "filename": "tests/test_main.py",
+      "status": "added",
+      "additions": 12,
+      "deletions": 0,
+      "patch": "@@ -0,0 +1,12 @@\n+def test_validate_request_rejects_empty_data():\n+    ..."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+﻿diff --git a/app/main.py b/app/main.py
+index 1111111..2222222 100644
+--- a/app/main.py
++++ b/app/main.py
+@@ -10,3 +10,8 @@
++def validate_request(data):
++    if not data:
++        raise ValueError("Request data is required")
++
++    return data
+diff --git a/tests/test_main.py b/tests/test_main.py
+new file mode 100644
+index 0000000..3333333
+--- /dev/null
++++ b/tests/test_main.py
+@@ -0,0 +1,4 @@
++def test_validate_request_rejects_empty_data():
++    with pytest.raises(ValueError):
++        validate_request({})
